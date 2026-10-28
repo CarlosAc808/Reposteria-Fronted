@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#fff8f5;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:calc(env(safe-area-inset-bottom,0px) + 5rem);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "on-error": "#ffffff", "on-background": "#261911", "on-tertiary-container": "#fbfffe", "tertiary-fixed-dim": "#77d6d3", "on-error-container": "#93000a", "inverse-on-surface": "#ffede5", "on-tertiary-fixed": "#00201f", "surface-tint": "#a14009", "primary": "#9f3e07", "primary-fixed-dim": "#ffb596", "secondary-container": "#fdd8c8", "on-primary-container": "#fffeff", "surface-variant": "#f7ddd1", "on-tertiary-fixed-variant": "#00504e", "tertiary-container": "#0e8381", "primary-container": "#c05621", "on-secondary": "#ffffff", "surface-bright": "#fff8f5", "on-primary": "#ffffff", "surface-container-lowest": "#ffffff", "tertiary": "#006867", "surface-container": "#ffeae0", "on-primary-fixed": "#360f00", "surface-dim": "#eed5c8", "surface-container-highest": "#f7ddd1", "secondary": "#74584c", "on-secondary-fixed": "#2a170e", "inverse-primary": "#ffb596", "error": "#ba1a1a", "surface-container-high": "#fde3d6", "secondary-fixed-dim": "#e3bfb0", "on-secondary-fixed-variant": "#5a4136", "outline-variant": "#dec0b5", "secondary-fixed": "#ffdbcc", "error-container": "#ffdad6", "on-surface-variant": "#57423a", "on-secondary-container": "#795c50", "background": "#fff8f5", "primary-fixed": "#ffdbcd", "outline": "#8a7268", "surface-container-low": "#fff1eb", "inverse-surface": "#3c2d25", "on-tertiary": "#ffffff", "tertiary-fixed": "#94f2f0", "surface": "#fff8f5", "on-surface": "#261911" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-md": "1rem", "gutter-sm": "0.75rem", "margin-tablet": "1.5rem", "margin-desktop": "2rem", "margin": "1rem", "space-xl": "2rem", "gutter": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "gutter-lg": "1.25rem", "space-xs": "0.25rem" }, "fontFamily": { "display-lg": ["Playfair Display"], "body-lg": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-md": ["Playfair Display"], "headline-lg": ["Playfair Display"], "title-md": ["Plus Jakarta Sans"], "headline-sm": ["Playfair Display"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"] }, "fontSize": { "display-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "400" }], "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }], "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "title-md": ["15px", { "lineHeight": "20px", "fontWeight": "600" }], "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }], "label-lg": ["14px", { "lineHeight": "18px", "fontWeight": "600" }], "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "400" }], "label-sm": ["10px", { "lineHeight": "12px", "letterSpacing": "0.04em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }], "title-lg": ["17px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "700" }] } } } }</script></head><body class="bg-surface font-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(38,25,17,0.05)]"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Atelier Repostería Logo" class="h-8 w-auto object-contain flex-shrink-0" src="https://lh3.googleusercontent.com/aida/AEtjO1XsCt_Ri0-mPo4Iim2iOzGe9sjFuS2GXkjlSY6bYMUYF-e4TW9wIKC-NDzqSQFASHTPdgpDAsHqPmN4BuPgkAUNMJEl9GxyZqJVaENUBurFAFxDvFsfslO-P-oWymjbJ9vnnpY2SDFOBzQuEbGRpmk7DnnHrf6XXRANRBZK1R3u-gmAcPsQDJ3ITzeYKouLgLF3k_53nfG_NzllSYx-H0rhSqKxdkmEfYoE7BLtG4QCOgOch-WsZT3lBG9N"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-sm text-headline-sm text-on-surface truncate tracking-tight">Atelier Dulce</span></div><div class="flex items-center gap-1.5"><span class="inline-block w-1.5 h-1.5 rounded-full bg-emerald-600"></span><span class="font-label-sm text-label-sm uppercase tracking-wider text-secondary">Abierto / En Producción</span></div></div></div><div class="flex items-center gap-space-sm flex-shrink-0"><span class="font-label-md text-label-md text-primary hidden sm:inline-block font-semibold">Costeo</span><button aria-label="Menu de perfil" class="w-11 h-11 flex items-center justify-center rounded-full hover:bg-surface-container transition-colors relative focus:outline-none" type="button"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_1px_4px_rgba(38,25,17,0.12)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB27_xPGoS8R78vWWcfspOT0bI-A4qxT7OlUkV2bAVgwpZyHzGHvpyayAKHk3HQ7jq9JPsebBSHYCKrO1qXfogkHgTBLCoxejjZnwYy8Y5J9HIi37GDwSbh1URsCOzIwB9uJPrUQ_B3V_sS8K5FsdkhkvZrWD-DSVElNcqE1BjY2oPBOL_MZeeGKhCCqG6VHmiOd9Wd6IGkNSuJJyqPOLLpA_3sbXhb2azFDayOXhWOkwlDbTx_qNWR9A"/><span class="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-primary ring-2 ring-surface"></span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="flex flex-col w-full">
+<div class="px-margin pt-space-md pb-space-xl flex flex-col gap-space-lg">
+<!-- Module Header & Editorial Context -->
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">calculate</span>
+          Módulo 9 • Taller Libre
+        </span>
+<span class="font-label-md text-label-md text-tertiary flex items-center gap-1 font-semibold">
+<span class="w-2 h-2 rounded-full bg-tertiary animate-pulse"></span> En Vivo
+        </span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight mt-1">Costeo Libre de Pasteles</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">
+        Calcula el costo real de cualquier preparación sin requerir receta previa.
+      </p>
+</div>
+<!-- Preparation Name Form Input Card -->
+<div class="bg-surface-container-low rounded-xl p-space-md shadow-sm flex flex-col gap-space-xs">
+<label class="font-label-md text-label-md text-secondary font-semibold flex items-center gap-1.5" for="prep-name">
+<span class="material-symbols-outlined text-[18px] text-primary">cake</span>
+        Nombre de la preparación <span class="text-on-surface-variant font-normal">(opcional)</span>
+</label>
+<div class="relative flex items-center">
+<input class="w-full h-12 px-3.5 bg-surface rounded-lg font-title-md text-title-md text-on-surface placeholder-on-surface-variant/50 focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="prep-name" type="text" value="Pastel de Chocolate Fudge &amp; Avellana (8 porciones)"/>
+<button class="absolute right-3 text-on-surface-variant hover:text-primary transition-colors" title="Editar nombre" type="button">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+</div>
+</div>
+<!-- Quick Stats Metric Band -->
+<div class="grid grid-cols-2 gap-gutter-sm">
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">inventory_2</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Ingredientes</span>
+<span class="font-title-lg text-title-lg text-on-surface truncate font-bold" id="item-count">4 ítems</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3.5 rounded-xl shadow-sm flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed flex-shrink-0">
+<span class="material-symbols-outlined text-[22px]">scale</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Masa Neta</span>
+<span class="font-title-lg text-title-lg text-on-surface truncate font-bold">~1.25 kg</span>
+</div>
+</div>
+</div>
+<!-- Ingredients List Section -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-0.5">
+<div class="flex items-center gap-2">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ingredientes del Inventario</h2>
+<span class="px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold">4 activos</span>
+</div>
+<button class="text-primary font-label-md text-label-md font-semibold flex items-center gap-0.5 hover:underline" type="button">
+<span class="material-symbols-outlined text-[16px]">sync</span> Actualizar
+        </button>
+</div>
+<!-- Ingredient Item 1 -->
+<div class="ingredient-row bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative transition-all" data-unit-cost="25.00" data-unit-factor="0.001">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up shot of fine milled organic pastry wheat flour in a delicate wooden measuring scoop dusted with white powder in warm bakery morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKdmrSwntvfpzsasG6HI69ZSi1sfcJCU6f1Lmrlyw1hBO9sp8BchehekMwjUBNJUOjF8VYsuR8xsG_o8vVDXzlJuKi_xa4HO_g6e0hYKZjZLlMkthstnTO-7IiA0Mosens7kfsUrMe87LlCy2T5IH7qADdSWh2nVTN1oDB2Y70Q9OPvsgioujkbOTr1HdjB4gp5YrtRPe_mAy7HwHt2aFicimG-1PJWyNqi1O45OA-nYxecYkTdQXaOQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Harina de Trigo Especial</span>
+<div class="flex items-center gap-2 mt-0.5 flex-wrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Stock: <strong class="text-on-surface">15.0 kg</strong>
+</span>
+<span class="text-outline-variant font-body-sm text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-secondary">Ref: $25.00 / kg</span>
+</div>
+</div>
+</div>
+<button aria-label="Remover Harina de Trigo Especial" class="remove-btn w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-12 gap-2 items-center bg-surface-container-low/70 p-2.5 rounded-lg">
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Cantidad</span>
+<div class="flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<input class="qty-input w-full bg-transparent font-title-md text-title-md text-on-surface text-left focus:outline-none font-bold" step="any" type="number" value="500"/>
+</div>
+</div>
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Unidad Compatible</span>
+<div class="relative flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<select class="unit-select w-full bg-transparent font-body-md text-body-md text-on-surface appearance-none focus:outline-none pr-5 font-semibold">
+<option selected="" value="g">Gramos (g)</option>
+<option value="kg">Kilogramos (kg)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-[18px] text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-secondary italic">
+            Conv: <span class="conversion-text font-medium text-on-surface">0.500 kg × $25.00</span>
+</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Subtotal:</span>
+<span class="font-title-lg text-title-lg text-primary font-bold subtotal-display">$12.50</span>
+</div>
+</div>
+</div>
+<!-- Ingredient Item 2 -->
+<div class="ingredient-row bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative transition-all" data-unit-cost="160.00" data-unit-factor="0.001">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Glossy dark 70 percent Belgian chocolate callets in an artisanal terracotta ramekin on a warm marble pastry counter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD21VkFAOCbDzPeEaYLzUHLGrkK8XZ0pcwvVKujANR5cSQIbLO1ru8yKHN3JeaIWI37OWMogEw2wJ2a3JxYgSsj_N-MH-1oRjdAifRTMOUY829IowEihA8rIwwJ6rmTbn2Fv3WuNDa1y8P8xUmyKMIZ8tCJfUx3AhFapWavF6afRoPaJg-b8enNGd_5PgeLYi57I-cN8s-8MUm_AASBVVT9tj4rjnX3VVPn9dWxQcEkVVPrwjiV6UcBMQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Chocolate Belga 70%</span>
+<div class="flex items-center gap-2 mt-0.5 flex-wrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Stock: <strong class="text-on-surface">6.2 kg</strong>
+</span>
+<span class="text-outline-variant font-body-sm text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-secondary">Ref: $160.00 / kg</span>
+</div>
+</div>
+</div>
+<button aria-label="Remover Chocolate Belga" class="remove-btn w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-12 gap-2 items-center bg-surface-container-low/70 p-2.5 rounded-lg">
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Cantidad</span>
+<div class="flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<input class="qty-input w-full bg-transparent font-title-md text-title-md text-on-surface text-left focus:outline-none font-bold" step="any" type="number" value="250"/>
+</div>
+</div>
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Unidad Compatible</span>
+<div class="relative flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<select class="unit-select w-full bg-transparent font-body-md text-body-md text-on-surface appearance-none focus:outline-none pr-5 font-semibold">
+<option selected="" value="g">Gramos (g)</option>
+<option value="kg">Kilogramos (kg)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-[18px] text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-secondary italic">
+            Conv: <span class="conversion-text font-medium text-on-surface">0.250 kg × $160.00</span>
+</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Subtotal:</span>
+<span class="font-title-lg text-title-lg text-primary font-bold subtotal-display">$40.00</span>
+</div>
+</div>
+</div>
+<!-- Ingredient Item 3 -->
+<div class="ingredient-row bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative transition-all" data-unit-cost="110.00" data-unit-factor="0.001">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Block of rich creamy artisanal unsalted golden French butter placed on wax baking paper in a patisserie kitchen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZUp2okFiT2CsqHxFoL3PM2Elt7J4cKd1Aft2mMSdjNLR4mBh7mZZ3eLHTAeUB98ps4qIfy-iLVMMTkjvo3_Np6v46rKbkGBWhWESXCvyzVzp4i97ZT7le2e57Lp3hV2-yaIPBI4i-qCrXP2Q3yKHijKzKdVQ9eVcKcrLObjRCe8LPT1--ZO0wpgQOL8TdeZcZkNN38JMyS83U8wHJEwM34fiahGz10AKjpStIC0MCboJUJNEo1CEYiw"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Mantequilla sin sal</span>
+<div class="flex items-center gap-2 mt-0.5 flex-wrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Stock: <strong class="text-on-surface">3.5 kg</strong>
+</span>
+<span class="text-outline-variant font-body-sm text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-secondary">Ref: $110.00 / kg</span>
+</div>
+</div>
+</div>
+<button aria-label="Remover Mantequilla sin sal" class="remove-btn w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-12 gap-2 items-center bg-surface-container-low/70 p-2.5 rounded-lg">
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Cantidad</span>
+<div class="flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<input class="qty-input w-full bg-transparent font-title-md text-title-md text-on-surface text-left focus:outline-none font-bold" step="any" type="number" value="200"/>
+</div>
+</div>
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Unidad Compatible</span>
+<div class="relative flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<select class="unit-select w-full bg-transparent font-body-md text-body-md text-on-surface appearance-none focus:outline-none pr-5 font-semibold">
+<option selected="" value="g">Gramos (g)</option>
+<option value="kg">Kilogramos (kg)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-[18px] text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-secondary italic">
+            Conv: <span class="conversion-text font-medium text-on-surface">0.200 kg × $110.00</span>
+</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Subtotal:</span>
+<span class="font-title-lg text-title-lg text-primary font-bold subtotal-display">$22.00</span>
+</div>
+</div>
+</div>
+<!-- Ingredient Item 4 -->
+<div class="ingredient-row bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-3 relative transition-all" data-unit-cost="3.50" data-unit-factor="1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-start gap-3 min-w-0">
+<div class="w-11 h-11 rounded-lg overflow-hidden flex-shrink-0 shadow-sm bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Brown free range fresh organic farm eggs nestled in a rustic woven wicker basket on warm timber table" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd0mTxBG77w6FE-V_Ktr3QoqgOFUO40Nlf6CE3eJLbCSbs0hSeEwZ45lUuaAy-Tmts-J1Tc3wQdkVAulGX3jfYbCGhUPRUyu3vTVsZ1-Rg_Ikq486JOwxtppSmujfEl92OM9M7U853sqZWeZ9TE5l_cuWbkJlA_hruX2kExoZBesYvep8-wJZVGbTt_p7RlGzCXt7vVBBFflxkucxyIfMmeHSnWirwgKyg1q2NUwHNLYCQuGEL2nw4lQ"/>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md text-on-surface font-bold truncate">Huevos de Granja</span>
+<div class="flex items-center gap-2 mt-0.5 flex-wrap">
+<span class="inline-flex items-center gap-1 font-body-sm text-body-sm text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> Stock: <strong class="text-on-surface">120 pzas</strong>
+</span>
+<span class="text-outline-variant font-body-sm text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-secondary">Ref: $3.50 / pza</span>
+</div>
+</div>
+</div>
+<button aria-label="Remover Huevos de Granja" class="remove-btn w-9 h-9 rounded-lg flex items-center justify-center text-outline hover:text-error hover:bg-error-container/40 transition-colors" type="button">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+<div class="grid grid-cols-12 gap-2 items-center bg-surface-container-low/70 p-2.5 rounded-lg">
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Cantidad</span>
+<div class="flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<input class="qty-input w-full bg-transparent font-title-md text-title-md text-on-surface text-left focus:outline-none font-bold" step="any" type="number" value="6"/>
+</div>
+</div>
+<div class="col-span-6 flex flex-col gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary font-semibold">Unidad Compatible</span>
+<div class="relative flex items-center h-10 bg-surface rounded-lg px-2.5 shadow-sm">
+<select class="unit-select w-full bg-transparent font-body-md text-body-md text-on-surface appearance-none focus:outline-none pr-5 font-semibold">
+<option selected="" value="pza">Piezas</option>
+<option value="docena">Docenas</option>
+</select>
+<span class="material-symbols-outlined absolute right-2 text-[18px] text-secondary pointer-events-none">expand_more</span>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-1">
+<span class="font-body-sm text-body-sm text-secondary italic">
+            Conv: <span class="conversion-text font-medium text-on-surface">6 pzas × $3.50</span>
+</span>
+<div class="flex items-baseline gap-1">
+<span class="font-label-sm text-label-sm uppercase text-secondary">Subtotal:</span>
+<span class="font-title-lg text-title-lg text-primary font-bold subtotal-display">$21.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Add Ingredient Button & Quick Drawer Trigger -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-12 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary font-title-md text-title-md font-bold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.99]" id="btn-open-search" type="button">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+        + Agregar ingrediente del inventario
+      </button>
+<!-- Expandable Quick Search Input Drawer -->
+<div class="hidden flex-col gap-2 p-3 bg-surface-container-low rounded-xl shadow-sm transition-all" id="quick-search-drawer">
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary text-[20px]">search</span>
+<input class="w-full h-11 pl-10 pr-9 bg-surface rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Buscar ingrediente en despensa o cámara..." type="text"/>
+<button class="absolute right-2.5 text-secondary hover:text-on-surface" id="btn-close-search" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<div class="flex items-center gap-1.5 overflow-x-auto py-1">
+<span class="font-label-sm text-label-sm text-secondary uppercase font-bold flex-shrink-0">Rápidos:</span>
+<button class="px-2.5 py-1 rounded-full bg-surface text-secondary hover:text-primary font-label-sm text-label-sm flex-shrink-0 shadow-sm" type="button">+ Azúcar Glass</button>
+<button class="px-2.5 py-1 rounded-full bg-surface text-secondary hover:text-primary font-label-sm text-label-sm flex-shrink-0 shadow-sm" type="button">+ Vainilla Papantla</button>
+<button class="px-2.5 py-1 rounded-full bg-surface text-secondary hover:text-primary font-label-sm text-label-sm flex-shrink-0 shadow-sm" type="button">+ Avellana Tostada</button>
+</div>
+</div>
+</div>
+<!-- Cost Summary Breakdown Box -->
+<div class="bg-gradient-to-br from-surface-container-high to-surface-container rounded-xl p-space-md shadow-md flex flex-col gap-3">
+<div class="flex items-center justify-between pb-2 border-b-0">
+<span class="font-headline-sm text-headline-sm text-on-surface flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[22px] text-primary">receipt_long</span>
+          Resumen de Costeo
+        </span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold uppercase">
+          En Tiempo Real
+        </span>
+</div>
+<div class="flex flex-col gap-2 pt-1">
+<div class="flex items-center justify-between">
+<span class="font-body-md text-body-md text-on-surface-variant">Costo Total Ingredientes:</span>
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold" id="total-ingredients">$95.50 MXN</span>
+</div>
+<div class="flex items-center justify-between bg-surface/70 px-3 py-2 rounded-lg">
+<div class="flex items-center gap-1.5">
+<span class="font-body-md text-body-md text-primary font-semibold">Sugerencia de Venta (x3.5):</span>
+<span class="w-4 h-4 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-sm text-[10px]" title="Factor estándar de pastelería fina que cubre mermas, mano de obra y utilidad">?</span>
+</div>
+<span class="font-headline-md text-headline-md text-primary font-bold tracking-tight" id="suggested-price">$334.25 MXN</span>
+</div>
+</div>
+<div class="mt-1 flex items-start gap-2 bg-surface-container-lowest/80 p-2.5 rounded-lg text-secondary">
+<span class="material-symbols-outlined text-[18px] text-tertiary flex-shrink-0 mt-0.5">info</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">
+          No se modifica el inventario hasta confirmar el guardado. Las cantidades permanecen intactas en stock durante el cálculo.
+        </span>
+</div>
+</div>
+<!-- Bottom Action Sticky Bar & CTA Actions -->
+<div class="flex flex-col gap-2.5 pt-2">
+<button class="w-full h-12 rounded-xl bg-primary text-on-primary font-title-lg text-title-lg font-bold flex items-center justify-center gap-2.5 shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" id="btn-save-inventory" type="button">
+<span class="material-symbols-outlined text-[22px]">verified</span>
+        Guardar y descontar inventario
+      </button>
+<button class="w-full h-11 rounded-xl bg-surface-container-low text-secondary hover:text-on-surface hover:bg-surface-container font-label-lg text-label-lg font-semibold flex items-center justify-center gap-1.5 transition-colors" id="btn-clear-form" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+        Limpiar formulario
+      </button>
+</div>
+<!-- Success Modal Toast Feedback -->
+<div class="hidden fixed bottom-24 left-4 right-4 z-50 bg-inverse-surface text-inverse-on-surface p-4 rounded-xl shadow-xl flex items-center gap-3 transition-transform" id="toast-success">
+<div class="w-9 h-9 rounded-full bg-tertiary text-on-tertiary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[20px]">check</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-title-md text-title-md font-bold">¡Costeo Registrado con Éxito!</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80 truncate">Se descontaron 4 ingredientes del inventario activo.</span>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initFreeCostingModule() {
+    const drawerBtn = document.getElementById('btn-open-search');
+    const drawerCloseBtn = document.getElementById('btn-close-search');
+    const searchDrawer = document.getElementById('quick-search-drawer');
+    const clearBtn = document.getElementById('btn-clear-form');
+    const saveBtn = document.getElementById('btn-save-inventory');
+    const toast = document.getElementById('toast-success');
+
+    // Toggle Quick Search Drawer
+    if (drawerBtn && searchDrawer) {
+      drawerBtn.addEventListener('click', () => {
+        searchDrawer.classList.toggle('hidden');
+        searchDrawer.classList.toggle('flex');
+      });
+    }
+    if (drawerCloseBtn && searchDrawer) {
+      drawerCloseBtn.addEventListener('click', () => {
+        searchDrawer.classList.add('hidden');
+        searchDrawer.classList.remove('flex');
+      });
+    }
+
+    // Live calculation engine
+    function recalculateTotal() {
+      const rows = document.querySelectorAll('.ingredient-row');
+      let totalCost = 0;
+      let activeRows = 0;
+
+      rows.forEach(row => {
+        if (row.classList.contains('hidden')) return;
+        activeRows++;
+
+        const qtyInput = row.querySelector('.qty-input');
+        const unitSelect = row.querySelector('.unit-select');
+        const subtotalDisplay = row.querySelector('.subtotal-display');
+        const convDisplay = row.querySelector('.conversion-text');
+        const unitCost = parseFloat(row.getAttribute('data-unit-cost')) || 0;
+        
+        const qty = parseFloat(qtyInput ? qtyInput.value : 0) || 0;
+        let subtotal = 0;
+
+        if (unitSelect) {
+          const val = unitSelect.value;
+          if (val === 'g') {
+            subtotal = (qty / 1000) * unitCost;
+            if (convDisplay) convDisplay.textContent = (qty / 1000).toFixed(3) + ' kg × $' + unitCost.toFixed(2);
+          } else if (val === 'kg') {
+            subtotal = qty * unitCost;
+            if (convDisplay) convDisplay.textContent = qty.toFixed(3) + ' kg × $' + unitCost.toFixed(2);
+          } else if (val === 'docena') {
+            subtotal = (qty * 12) * unitCost;
+            if (convDisplay) convDisplay.textContent = (qty * 12) + ' pzas × $' + unitCost.toFixed(2);
+          } else {
+            // piezas
+            subtotal = qty * unitCost;
+            if (convDisplay) convDisplay.textContent = qty + ' pzas × $' + unitCost.toFixed(2);
+          }
+        }
+
+        if (subtotalDisplay) {
+          subtotalDisplay.textContent = '$' + subtotal.toFixed(2);
+        }
+        totalCost += subtotal;
+      });
+
+      const totalIngredientsElem = document.getElementById('total-ingredients');
+      const suggestedPriceElem = document.getElementById('suggested-price');
+      const itemCountElem = document.getElementById('item-count');
+
+      if (totalIngredientsElem) {
+        totalIngredientsElem.textContent = '$' + totalCost.toFixed(2) + ' MXN';
+      }
+      if (suggestedPriceElem) {
+        const salePrice = totalCost * 3.5;
+        suggestedPriceElem.textContent = '$' + salePrice.toFixed(2) + ' MXN';
+      }
+      if (itemCountElem) {
+        itemCountElem.textContent = activeRows + ' ítems';
+      }
+    }
+
+    // Attach listeners to row inputs
+    document.querySelectorAll('.ingredient-row').forEach(row => {
+      const qtyInput = row.querySelector('.qty-input');
+      const unitSelect = row.querySelector('.unit-select');
+      const removeBtn = row.querySelector('.remove-btn');
+
+      if (qtyInput) qtyInput.addEventListener('input', recalculateTotal);
+      if (unitSelect) unitSelect.addEventListener('change', recalculateTotal);
+      if (removeBtn) {
+        removeBtn.addEventListener('click', () => {
+          row.style.opacity = '0';
+          setTimeout(() => {
+            row.classList.add('hidden');
+            recalculateTotal();
+          }, 150);
+        });
+      }
+    });
+
+    // Clear form interaction
+    if (clearBtn) {
+      clearBtn.addEventListener('click', () => {
+        const prepInput = document.getElementById('prep-name');
+        if (prepInput) prepInput.value = '';
+
+        document.querySelectorAll('.ingredient-row').forEach(row => {
+          row.classList.remove('hidden');
+          row.style.opacity = '1';
+          const qty = row.querySelector('.qty-input');
+          if (qty) qty.value = '0';
+        });
+        recalculateTotal();
+      });
+    }
+
+    // Primary save CTA interaction
+    if (saveBtn && toast) {
+      saveBtn.addEventListener('click', () => {
+        saveBtn.disabled = true;
+        saveBtn.classList.add('opacity-80');
+        toast.classList.remove('hidden');
+        toast.classList.add('flex');
+
+        setTimeout(() => {
+          toast.classList.add('hidden');
+          toast.classList.remove('flex');
+          saveBtn.disabled = false;
+          saveBtn.classList.remove('opacity-80');
+        }, 3200);
+      });
+    }
+
+    // Initial pass
+    recalculateTotal();
+  })();
+</script></main><nav class="fixed bottom-0 w-full z-50 bg-surface/95 backdrop-blur-xl shadow-[0_-2px_12px_rgba(38,25,17,0.06)]" data-active-classes="text-primary font-bold"><div class="h-16 px-gutter-sm flex items-center justify-around"><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="dashboard" href="#"><span class="material-symbols-outlined text-[24px]">dashboard</span><span class="font-label-sm text-label-sm tracking-tight">Dashboard</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors relative" data-path="pedidos" href="#"><div class="relative"><span class="material-symbols-outlined text-[24px]">assignment_turned_in</span><span class="absolute -top-1 -right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary text-on-primary font-label-sm text-[10px] flex items-center justify-center font-bold">4</span></div><span class="font-label-sm text-label-sm tracking-tight">Pedidos</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 transition-colors text-primary font-bold" data-path="costeo" href="#"><div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container"><span class="material-symbols-outlined text-[20px]">calculate</span></div><span class="font-label-sm text-label-sm tracking-tight">Costeo</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="inventario" href="#"><span class="material-symbols-outlined text-[24px]">inventory_2</span><span class="font-label-sm text-label-sm tracking-tight">Inventario</span></a><a class="flex flex-col items-center justify-center min-w-[56px] h-12 gap-0.5 text-on-surface-variant hover:text-on-surface transition-colors" data-path="recetas" href="#"><span class="material-symbols-outlined text-[24px]">menu_book</span><span class="font-label-sm text-label-sm tracking-tight">Recetas</span></a></div><div class="h-[env(safe-area-inset-bottom,0px)] w-full"></div></nav></body></html>
